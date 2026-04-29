@@ -72,7 +72,7 @@ export default function LoginForm() {
   }
 
   return (
-    <Card className="w-full bg-transparent shadow-none border-none border-0">
+    <Card className="w-full bg-transparent shadow-none !border-0 !outline-none">
     {/* <Card className="
       w-[520px]
       bg-white/40

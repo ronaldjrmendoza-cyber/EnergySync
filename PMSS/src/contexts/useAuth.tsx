@@ -4,6 +4,7 @@ type Role = "admin" | "superadmin"
 
 type User = {
   username: string
+  email: string
   password: string
   role: Role
 }
@@ -17,8 +18,8 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType | null>(null)
 
 const defaultUsers: User[] = [
-  { username: "admin", password: "password", role: "admin" },
-  { username: "super", password: "password", role: "superadmin" },
+  { username: "admin", email: "admin@gmail.com", password: "password", role: "admin" },
+  { username: "super", email: "superadmin@gmail.com", password: "password", role: "superadmin" },
 ]
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -26,7 +27,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = (username: string, password: string) => {
     const found = defaultUsers.find(
-      (u) => u.username === username && u.password === password
+      (u) => (u.username === username || u.email === username) && u.password === password
     )
 
     if (found) {
