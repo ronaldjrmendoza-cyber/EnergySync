@@ -78,9 +78,6 @@
 
 .nav-item.active {
     background-color: var(--active-light-blue);
-}
-
-.nav-item.active {
     color: #1C5186;
 }
 
@@ -98,18 +95,174 @@
     padding: 18px 18px 18px 48px;
 }
 
-/* .main-content {
+.main-content {
     flex: 1;
-    background-color: #f9f9f9;
+    background-color: #F8F9FA;
     padding: 40px;
     overflow-y: auto;
 }
 
-.welcome-text {
-    font-size: 32px;
-    font-weight: 600;
-    color: #111;
-} */
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+}
+
+/* Info Card */
+.info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-bg { background-color: #B22222; } 
+
+.name-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.edit-btn { 
+    color: var(--energy-blue); 
+    cursor: pointer; 
+}
+
+.full-name { 
+    font-size: 18px; 
+    color: #333; 
+}
+
+.handle { color: #393939; }
+
+/* Assigned Programs Section */
+.programs-container {
+    background: white;
+    height: 150%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.blue-header {
+    background: var(--energy-blue);
+    color: white;
+    padding: 12px 20px;
+}
+
+.program-row {
+    margin: 15px;
+    padding: 18px;
+    background: #E9ECEF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+    color: #1a1919;
+    font-size: 14px;
+}
+
+.status-badge {
+    background: var(--energy-blue);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Notifications Panel */
+.notif-panel {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    height: 200%;
+}
+
+.notif-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    color: var(--energy-blue);
+}
+
+.notif-card {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    height: 6%;
+    width: 100%;
+}
+
+.notif-list {
+    height: 150%;
+    overflow-y: auto;
+}
+
+.light-grey { background-color: #EDEDED; }
+
+.user-icon-row { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.circle-icon { 
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+}
+
+.blue-bg { background-color: var(--energy-blue); }
+
+.notif-time { 
+    color: #1a1919; 
+    font-size: 13px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.unread-dot { 
+    width: 8px; 
+    height: 8px; 
+    background: var(--energy-blue); 
+    border-radius: 50%; 
+}
 
 footer {
     position: fixed;

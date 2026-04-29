@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Home, User, Tv, Calendar, LogOut } from "lucide-react"; 
+import { Home, User, Tv, Calendar, LogOut, Camera, Edit2, Bell } from "lucide-react"; 
 
 export default function SuperadminProfile() {
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function SuperadminProfile() {
                         <li>
                             <NavLink to="/superadmin-program" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
                                 <Tv size={20} />
-                                <span>Profile</span>
+                                <span>Program</span>
                             </NavLink>
                         </li>
                         <li>
@@ -63,11 +63,67 @@ export default function SuperadminProfile() {
                     </ul>
                 </nav>
 
-                {/* <main className="main-content">
-                    <div className="welcome-section">
-                         <h1 className="welcome-text">Welcome, DJ Makisig!</h1>
+                 <main className="main-content">
+                    <div className="profile-container-grid">
+                        <div className="profile-info-column">
+                            <div className="white-card user-identity-card">
+                                <div className="profile-avatar-circle">
+                                    <Camera size={35} color="white" />
+                                </div>
+                                <div className="user-text-info">
+                                    <div className="name-row">
+                                        <h2 style={{ fontSize: '23px' }}><strong>DJ Makisig</strong></h2>
+                                        <Edit2 size={22} className="edit-pencil" />
+                                    </div>
+                                    <p className="full-name">Ruel Viñas</p>
+                                    <p className="handle">@djmakisig</p>
+                                </div>
+                            </div>
+
+                            {/* Assigned Programs */}
+                            <div className="programs-section">
+                                <div className="blue-section-bar">
+                                    <h3>Assigned Programs</h3>
+                                </div>
+                                <div className="program-item-box">
+                                    <div className="program-details">
+                                        <h4 style={{ fontSize: '17px' }}><strong>Harambogan sa Radyo</strong></h4>
+                                        <div className="time-slot">
+                                            <Calendar size={15} />
+                                            <span style={{ fontSize: '14px' }}>7:00 AM - 9:00 AM</span>
+                                        </div>
+                                    </div>
+                                    <span className="status-badge">Confirmed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Notifications */}
+                        <div className="notifications-sidebar-panel">
+                            <div className="notif-title-area">
+                                <Bell size={22} />
+                                <h3>Notifications</h3>
+                            </div>
+                            <div className="notif-content-list">
+                                <div className="notif-row">
+                                    <span className="status-dot red-dot"></span>
+                                    <p>DJ Apple confirmed her attendance to ho...</p>
+                                    <div className="notif-time"><strong>2:00 PM</strong><span className="active-indicator"></span></div>
+                                </div>
+                                <div className="notif-row">
+                                    <span className="status-dot pink-dot"></span>
+                                    <p>DJ Barbie is not available to host "Energy sa...</p>
+                                    <div className="notif-time">Mar 13</div>
+                                </div>
+                                <div className="notif-row">
+                                    <span className="status-dot green-dot"></span>
+                                    <p>Papa Gats confirmed his attendance</p>
+                                    <div className="notif-time">Mar 13</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </main> */}
+                </main>
             </div>
 
             <footer>

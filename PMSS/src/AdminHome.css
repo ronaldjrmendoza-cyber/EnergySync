@@ -78,9 +78,6 @@
 
 .nav-item.active {
     background-color: var(--active-light-blue);
-}
-
-.nav-item.active {
     color: #1C5186;
 }
 

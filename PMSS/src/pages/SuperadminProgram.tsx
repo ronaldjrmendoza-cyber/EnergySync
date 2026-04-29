@@ -42,7 +42,7 @@ export default function SuperadminProgram() {
                         <li>
                             <NavLink to="/superadmin-program" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
                                 <Tv size={20} />
-                                <span>Profile</span>
+                                <span>Program</span>
                             </NavLink>
                         </li>
                         <li>
